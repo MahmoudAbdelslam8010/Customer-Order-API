@@ -159,7 +159,7 @@ Filter orders by status.
 -   **Laravel Docs:** Used to reference the Eloquent ORM and validation rules.
 -   **Thunder Client:** Used to test API endpoints and ensure functionality.
 
-## Scalability Considerations
+## Scalability Considerations (Bonus)
 
 ### Message Queues
 
