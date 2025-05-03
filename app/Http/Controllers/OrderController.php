@@ -25,7 +25,7 @@ class OrderController extends Controller
 
     public function getOrder()
     {
-        return Order::with('customer')->get();
+        return Order::with('customer')->get(); // solve n+1 problem -- eager loading
     }
 
 

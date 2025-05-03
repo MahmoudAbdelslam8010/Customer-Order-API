@@ -26,10 +26,7 @@ class CustomerController extends Controller
             'name' => 'required|string',
             'email' => 'required|email|unique:customers,email',
         ]);
-        $customer = Customer::create([
-            'name' => $validated['name'],
-            'email' => $validated['email'],
-        ]);
+        $customer = Customer::create($validated);
 
         return response()->json($customer, 201);
     }
