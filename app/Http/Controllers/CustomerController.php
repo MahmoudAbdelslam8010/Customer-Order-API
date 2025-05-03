@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -11,7 +12,8 @@ class CustomerController extends Controller
     public function deleteAll()
 {
     Customer::truncate();
-    return response()->json(['message' => 'All customers deleted successfully']);
+    Order::truncate();
+    return response()->json(['message' => 'All customers and orders deleted successfully']);
 }
     public function getCustomers()
     {
